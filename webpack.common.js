@@ -1,11 +1,8 @@
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-  mode: 'development',
   entry: {
-    app: './src/index.js'
+    index: './src/index.js'
   },
   module: {
     rules: [
@@ -26,17 +23,6 @@ module.exports = {
       }
     ]
   },
-  devtool: 'inline-source-map',
-  devServer: {
-    contentBase: './dist',
-  },
-  plugins: [
-    new CleanWebpackPlugin(),
-    new HtmlWebpackPlugin({
-      title: 'LifeJS',
-      template: 'index.html'
-    }),
-  ],
   output: {
     filename: '[name].js',
     path: path.resolve(__dirname, 'dist'),
