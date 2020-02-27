@@ -1,0 +1,6 @@
+.npmignore
+.gitignore
+index.html
+webpack.config.js
+src
+demo
